@@ -1,14 +1,20 @@
 'use client'
+import { UserManageContext } from "@/contexts/UserManageContext"
 import Image from "next/image"
+import { useContext } from "react"
 
 type UserCardProps = {
   user: any
 }
 
 export default function UserCard ({ user } : UserCardProps) {
+  const { setUserSelected } = useContext(UserManageContext)
 
   return (
-    <div className="p-2 border hover:bg-gray-300 rounded-md w-full flex flex-col items-center cursor-pointer" >
+    <div 
+      className="p-2 border hover:bg-gray-300 rounded-md w-full flex flex-col gap-2 items-center cursor-pointer"
+      onClick={() => setUserSelected(user)}
+    >
       <Image
         src={user.avatar_url}
         alt={user.login}
@@ -16,7 +22,9 @@ export default function UserCard ({ user } : UserCardProps) {
         height={100}
         className="rounded-full"
       />
-      {user.login}
+      <span>
+        {user.login}
+      </span>
     </div>
   )
 }
