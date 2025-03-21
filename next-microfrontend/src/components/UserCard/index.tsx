@@ -12,7 +12,7 @@ export default function UserCard ({ user } : UserCardProps) {
 
   return (
     <div 
-      className="p-2 border hover:bg-gray-300 rounded-md w-full flex flex-col gap-2 items-center cursor-pointer"
+      className="p-2 trigger border hover:bg-gray-300 rounded-md w-full flex flex-col gap-2 items-center cursor-pointer"
       onClick={() => setUserSelected(user)}
     >
       <Image
@@ -25,6 +25,12 @@ export default function UserCard ({ user } : UserCardProps) {
       <span>
         {user.login}
       </span>
+
+      {
+        <span className="action text-sm text-blue-600" >
+          Ver detalles
+        </span>
+      }
     </div>
   )
 }

@@ -18,3 +18,11 @@ body {
 * {
   border-color: lightgrey;
 }
+
+.trigger .action {
+  visibility: hidden;
+}
+
+.trigger:hover .action {
+  visibility: visible;
+}
