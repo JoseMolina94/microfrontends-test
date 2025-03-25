@@ -1,13 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UserDetailsComponent } from './user-details.component';
-
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { DynamicErrorInterceptor } from '../../interceptors/dynamic-error.interceptor';
 
 @NgModule({
-  declarations: [UserDetailsComponent],
+  declarations: [],
   imports: [
     CommonModule
   ],
-  exports: [UserDetailsComponent]
+  exports: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: DynamicErrorInterceptor,
+      multi: true
+    }
+  ]
 })
 export class UserDetailsModule { }

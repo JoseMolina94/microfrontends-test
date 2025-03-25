@@ -1,3 +1,4 @@
+import { createFetch } from '@angular-architects/module-federation/nguniversal';
 import { APP_BASE_HREF } from '@angular/common';
 import { CommonEngine, isMainModule } from '@angular/ssr/node';
 import express from 'express';

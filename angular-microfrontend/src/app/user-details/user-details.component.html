@@ -1,4 +1,50 @@
-<div *ngIf="user" class="user-details">
-  <img [src]="user.avatar" alt="User Avatar" class="avatar" />
-  <h2>{{ user.name }}</h2>
+<div *ngIf="user" class="user-details-layout">
+  <div>
+    <div class="user-details-summary-card">
+      <div class="main-container">
+        <img [src]="user.avatar_url" alt="User Avatar" class="avatar" />
+        <h2>{{ user.login }}</h2>
+      </div>
+
+      <div class="user-info-container">
+        <span class="user-info-item">
+          {{ (user.email) ? user.email : "Sin E-mail confirmado" }}
+        </span>
+        <span class="user-info-item">
+          {{ (followers.length > 0) ? (followers.length + " Seguidores") : "Sin seguidores" }}
+        </span>
+        <span class="user-info-item">
+          {{ (organizations.length > 0) ? (organizations.length + " Organizaciones") : "Sin organizaciones registradas" }}
+        </span>
+        <span class="user-info-item">
+          {{ (suscriptions.length > 0) ? (suscriptions.length + " Suscripciones") : "Sin suscripciones registradas" }}
+        </span>
+
+        <span class="user-info-item" [ngClass]="{
+          'is-hireable': user.hireable,
+          'is-not-hireable': !user.hireable
+        }">
+          {{ user.hireable ? "Este usuario es contratable" : "Este usuario no es contratable" }}
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div>
+      <h3>Repositorios</h3>
+      <div class="repositories">
+        <div *ngFor="let repo of repositories" class="repo-card">
+          <h3 class="title">{{ repo.name }}</h3>
+          <p class="description">{{ repo.description }}</p>
+          <div class="stats">
+            <span>⭐ {{ repo.stargazers_count }}</span>
+            <span>🔀 {{ repo.forks_count }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>

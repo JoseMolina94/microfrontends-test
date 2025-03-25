@@ -1,7 +1,13 @@
-
 <main>
-  <h1>Prueba de UserDetailsComponent</h1>
-  <app-user-details [user]="user"></app-user-details>
+  <div class="header">
+    <h1 class="title">Prueba local de UserDetailsComponent</h1>
+    <span class="description">
+      Esta es una prueba local del UserDetailsComponent... la información vista aquí esta puesta en el
+      <strong>app.component.ts</strong>. Cuando este componente es llamado desde la aplicacion Host de
+      <strong>NextJS</strong> mostrará los datos del usuario seleccionado.
+    </span>
+  </div>
+  <app-user-details />
 </main>
 
 <router-outlet />

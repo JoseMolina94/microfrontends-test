@@ -1,14 +1,87 @@
-.user-details {
-  text-align: center;
-  padding: 20px;
+.container {
   border: 1px solid #ccc;
-  border-radius: 8px;
-  max-width: 200px;
+  border-radius: 1rem;
+  margin: 0 auto;
+  padding: .5rem;
+}
+
+.user-details-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1rem;
+}
+
+.user-details-summary-card {
+  padding: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
   margin: 0 auto;
 }
+
+.user-details-summary-card .main-container {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
 .avatar {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin-bottom: 10px;
+}
+
+.repositories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .5rem
+}
+
+.repo-card {
+  padding: .5rem;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+}
+
+.repo-card .title {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.repo-card .description {
+  font-size: 14px;
+  min-height: 32px;
+}
+
+.repo-card .stats {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.user-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.user-info-item {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.is-hireable {
+  color: green;
+  font-weight: 600;
+}
+
+.is-not-hireable {
+  color: red;
+  font-weight: 600;
 }
