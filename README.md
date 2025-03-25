@@ -29,4 +29,6 @@ Puede verse en remoteEntry en **http://localhost:3001/remoteEntry.js** si el pro
 
 **Module Federation** esta implementado pero no funciona actualmente. Podras ver los archivos correspondientes dentro de este proyecto.
 
+En el microfrontend de NextJS, el archivo "src/app/user/[id]" es el que intentaba consumir mediante el **Module Federation** el microfrontend de angular.
+
 ### Muchas gracias por leer.
