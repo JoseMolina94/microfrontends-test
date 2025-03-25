@@ -19,6 +19,8 @@ export default function UserManageContextProvider({ children }: UserManageContex
 
   const [userSelected, setUserSelected] = useState<any>(null)
 
+  console.log('USER SELECTED STATE', userSelected)
+  
   return (
     <UserManageContext.Provider
       value={{

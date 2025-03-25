@@ -74,7 +74,11 @@
 					"options": {
 						"port": 4200,
 						"publicHost": "http://localhost:4200",
-						"extraWebpackConfig": "webpack.config.js"
+						"extraWebpackConfig": "webpack.config.js",
+						"headers": {
+							"Access-Control-Allow-Origin": "*",
+							"Access-Control-Allow-Methods": "GET, OPTIONS"
+						}
 					}
 				},
 				"extract-i18n": {

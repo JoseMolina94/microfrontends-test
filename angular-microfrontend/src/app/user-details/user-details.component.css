@@ -85,3 +85,25 @@
   color: red;
   font-weight: 600;
 }
+
+@media (max-width: 425px) {
+  .user-details-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .repositories {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5rem
+  }
+}
+
+@media (max-width: 1024px) {
+  .repositories {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5rem
+  }
+}
